@@ -1,0 +1,5 @@
+bool do_thing
+---
+int8 progress
+---
+bool did_do_thing
