@@ -5,8 +5,20 @@
 #include <behaviortree_cpp_v3/condition_node.h>
 
 #include <rclcpp/rclcpp.hpp>
+#include <rclcpp/generic_subscription.hpp>
 
 namespace ros2_bt {
+
+/**
+ * @brief 
+ * 
+ * @tparam msgT 
+ * 
+ * This can leverage the generic subscriber to handle pulling in and parsing the data,
+ * assuming some kind of generic format. the goal is to be able to parse certain message
+ * types in order to apply a condition on them. this should be able to go back to being a 
+ * condition node again. it just needs the below input params
+ */
 
 template <class msgT>
 class TopicValueAction : public BT::CoroActionNode {
